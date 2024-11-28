@@ -1,0 +1,21 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo_image.png" type="image/x-icon">
+    <title>MyFlaskApp</title>
+</head>
+
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Welcome To FlaskApp</h1>
+        <p class="lead">This appliation is built in Flask framework and is the focus for the "Learning The Flask" For building Projects</p>
+        {% if session.logged_in == NULL %}
+            <a href="/register" class="btn btn-primary">Register</a>
+            <a href="/login" class="btn btn-success btn-lg">Login</a>
+        {% endif %}
+    </div>
+
+{% endblock %}
